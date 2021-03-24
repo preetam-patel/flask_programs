@@ -6,8 +6,8 @@ mail=Mail(app)
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'preetampatel22699@gmail.com'
-app.config['MAIL_PASSWORD'] = '7019407078'
+app.config['MAIL_USERNAME'] = 'youremailid'
+app.config['MAIL_PASSWORD'] = '********'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -15,7 +15,7 @@ mail = Mail(app)
 
 @app.route("/")
 def index():
-   msg = Message('Hello', sender = 'preetampatel22699@gmail.com', recipients = ['preetmcit@gmail.com'])
+   msg = Message('Hello', sender = 'youremailid', recipients = ['senderemailid'])
    msg.body = "Hello Flask message sent from Flask-Mail"
    mail.send(msg)
    return "Sent"
